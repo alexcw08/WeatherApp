@@ -2,6 +2,7 @@ import "./App.css";
 import CityCard from "./components/cityCard";
 import SearchBar from "./components/searchBar";
 import HourlyCard from "./components/hourlyCard";
+import DailyCard from "./components/dailyCard";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <SearchBar />
       <CityCard />
       <HourlyCard />
+      <DailyCard />
     </div>
   );
 }

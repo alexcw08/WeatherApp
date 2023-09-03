@@ -1,6 +1,6 @@
 function searchBar() {
   return (
-    <div className="flex rounded-lg w-2/3 md:w-1/3 bg-violet-400 m-6">
+    <div className="flex rounded-lg w-2/3 md:w-1/3 bg-violet-400 m-5">
       <input
         className="w-full bg-violet-400 placeholder-slate-200 rounded-xl text-center text-slate-100"
         type="number"
