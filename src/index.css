@@ -11,6 +11,6 @@
 
 @layer components {
   .hourlyContMd {
-    @apply flex flex-col justify-center items-center p-5 text-lg;
+    @apply flex flex-col justify-center items-center text-lg;
   }
 }
