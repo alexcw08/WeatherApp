@@ -3,6 +3,7 @@ function cityCard() {
     <div className="flex px-10 w-11/12 bg-violet-700 text-slate-100 rounded-xl justify-between">
       <div className="py-6  flex flex-col justify-evenly ">
         <h1 className="text-5xl">Boston</h1>
+
         <h2 className=" text-lg text-slate-300">Massachusetts</h2>
         <h3 className="text-lg text-slate-300">Monday, January 01 </h3>
         <h3 className="hidden md:block text-lg text-slate-300">7:00 AM</h3>
