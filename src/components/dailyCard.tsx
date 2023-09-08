@@ -16,7 +16,7 @@ function dailyCard() {
         <h1 className="text-3xl">Daily</h1>
         <h1 className="text-violet-400 text-lg">Next 7 Days</h1>
       </div>
-      <div className="flex flex-col md:flex-row md:mx-24 md:justify-evenly mb-4">
+      <div className="flex flex-col md:flex-row md:mx-10 md:justify-center lg:justify-between mb-4 flex-wrap">
         {data.map((day) => (
           <DayContainer
             day={day[0]}

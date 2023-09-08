@@ -21,7 +21,7 @@ function hourlyCard() {
         <h1 className="text-3xl">Hourly</h1>
         <h1 className="text-violet-400 text-lg">Next 12 Hours</h1>
       </div>
-      <div className="flex flex-col w-11/12 mx-7 md:flex-row md:mx-24 md:justify-evenly md:flex-wrap mb-4 ">
+      <div className="flex flex-col w-11/12 mx-7 md:flex-row md:justify-evenly md:flex-wrap mb-4 ">
         {data.map((hour) => (
           <HourContainer
             hour={hour[0]}

@@ -6,7 +6,7 @@ import DailyCard from "./components/dailyCard";
 
 function App() {
   return (
-    <div className="bg-violet-200 flex flex-col p-7 items-center ">
+    <div className="bg-violet-200 flex flex-col items-center min-h-screen overflow-hidden">
       <SearchBar />
       <CityCard />
       <HourlyCard />
