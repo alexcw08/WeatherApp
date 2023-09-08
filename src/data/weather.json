@@ -1,0 +1,59 @@
+{
+  "city": "Boston",
+  "state": "Massachusetts",
+  "zipcode": "02108",
+  "date": "01/01/2023",
+  "time": "7:00",
+  "weather": {
+    "today": {
+      "temperature": 67,
+      "description": "Sunny",
+      "high": 78,
+      "low": 52
+    },
+    "hourly": [
+      {
+        "time": "8:00am",
+        "temperature": 69,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "9:00am",
+        "temperature": 60,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "10:00am",
+        "temperature": 32,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "11:00am",
+        "temperature": 67,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "12:00pm",
+        "temperature": 70,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "01:00pm",
+        "temperature": 71,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      },
+      {
+        "time": "2:00pm",
+        "temperature": 65,
+        "description": "Cloudy",
+        "icon": "cloudyIcon"
+      }
+    ]
+  }
+}
