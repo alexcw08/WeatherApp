@@ -1,14 +1,29 @@
 import DayContainer from "./dayContainer";
 
 function dailyCard() {
+  const data: string[][] = [
+    ["Tuesday", "67", "Cloudy"],
+    ["Wednesday", "69", "Cloudy"],
+    ["Thursday", "70", "Sunny"],
+    ["Friday", "65", "Cloudy"],
+    ["Saturday", "62", "Cloudy"],
+    ["Sunday", "64", "Sunny"],
+    ["Monday", "62", "Cloudy"],
+  ];
   return (
-    <div className="px-10 w-11/12 bg-violet-700 text-slate-100 rounded-xl justify-between m-6">
-      <div className="flex mt-5 text-xl text-violet-100 justify-between">
-        <h1>Daily</h1>
-        <h1 className="text-violet-400">Next 7 Days</h1>
+    <div className="bg-violet-700 text-slate-100 rounded-xl w-11/12 my-5">
+      <div className="flex mt-6 ml-10  mr-8 text-xl text-violet-100 justify-between mb-3">
+        <h1 className="text-3xl">Daily</h1>
+        <h1 className="text-violet-400 text-lg">Next 7 Days</h1>
       </div>
-      <div className="flex flex-col md:flex-row">
-        <DayContainer />
+      <div className="flex flex-col md:flex-row md:mx-24 md:justify-evenly md:mb-4">
+        {data.map((day) => (
+          <DayContainer
+            day={day[0]}
+            temperature={day[1]}
+            description={day[2]}
+          />
+        ))}
       </div>
     </div>
   );
