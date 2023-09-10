@@ -1,14 +1,32 @@
-function searchBar() {
+import { Dispatch, SetStateAction, useState } from "react";
+
+type Props = {
+  setZipCode: Dispatch<SetStateAction<string>>;
+};
+
+function SearchBar({ setZipCode }: Props) {
+  const [userInput, setUserInput] = useState<string>("");
+
+  const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setZipCode(userInput);
+  };
+
   return (
-    <div className="flex rounded-lg w-2/3 md:w-1/3 bg-violet-400 m-5">
+    <form
+      className="flex rounded-lg w-2/3 md:w-1/3 bg-violet-400 m-5"
+      onSubmit={handleSubmit}
+    >
       <input
+        required
         className="w-full bg-violet-400 placeholder-slate-200 rounded-xl text-center text-slate-100"
-        type="number"
-        name=""
-        id=""
+        type="text"
         placeholder="Search a Zip Code"
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
       />
-      <div className="w-10 cursor-pointer mx-2">
+      <h1>Input is: {userInput}</h1>
+      <button className="w-10 cursor-pointer mx-2">
         <svg
           fill="none"
           stroke="currentColor"
@@ -23,9 +41,9 @@ function searchBar() {
             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
           />
         </svg>
-      </div>
-    </div>
+      </button>
+    </form>
   );
 }
 
-export default searchBar;
+export default SearchBar;
