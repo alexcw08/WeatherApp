@@ -1,14 +1,16 @@
 type CardProps = {
-  hour: string;
-  temperature: string;
-  description: string;
+  hour?: string;
+  temperature?: number;
+  description?: string;
 };
-function hourContainer({ hour, temperature, description }: CardProps) {
+function hourContainer(props: CardProps) {
   return (
     // <div className="flex flex-row justify-between items-center md:hourlyContMd md:mb-1 md:px-6 md:py-4">
     <div className="flex justify-between md:flex-col md:px-10 mb-5 md:justify-center md:items-center">
-      <h3 className="text-xl w-20 md:w-fit">{hour}</h3>
-      <h4 className="md:text-2xl w-10 md:w-fit text-center">{temperature}°</h4>
+      <h3 className="text-xl w-20 md:w-fit">{props.hour}</h3>
+      <h4 className="md:text-2xl w-10 md:w-fit text-center">
+        {props.temperature?.toFixed(0)}°
+      </h4>
 
       <svg
         className="w-8 md:w-20"
@@ -26,7 +28,7 @@ function hourContainer({ hour, temperature, description }: CardProps) {
         />
       </svg>
       {/* <h4 className="">Cloudy</h4> */}
-      <h4 className="text-xl w-20 md:w-fit">{description}</h4>
+      <h4 className="text-xl w-20 md:w-fit">{props.description}</h4>
     </div>
   );
 }

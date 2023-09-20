@@ -1,14 +1,14 @@
 type CardProps = {
-  day: string;
-  temperature: string;
-  description: string;
+  day?: string;
+  temperature?: number;
+  description?: string;
 };
 
 function hourContainer({ day, temperature, description }: CardProps) {
   return (
     <div className="flex flex-row justify-between items-center m-4 md:flex-col md:justify-center md:items-center">
       <h3 className="w-2/5 md:w-20 md:text-center">{day}</h3>
-      <h4 className="md:text-2xl">{temperature}°</h4>
+      <h4 className="md:text-2xl">{temperature?.toFixed(0)}°</h4>
       <svg
         className="w-8 md:w-12"
         fill="none"

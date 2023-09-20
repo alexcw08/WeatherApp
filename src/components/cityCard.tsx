@@ -1,25 +1,58 @@
-function cityCard() {
+type CityProps = {
+  data: {
+    time?: number;
+    temp?: number;
+    description?: string;
+    max?: number;
+    min?: number;
+  };
+  locData: {
+    city?: string;
+    county?: string;
+    state?: string;
+    zip?: string;
+    country?: string;
+  };
+  dateAndTime: {
+    date?: number;
+    day?: string;
+    month?: string;
+    time?: string;
+  };
+};
+
+// TODO
+// add back max/min
+// round temperature
+function cityCard(props: CityProps) {
   return (
     <div className="flex px-10 w-11/12 bg-violet-700 text-slate-100 rounded-xl justify-between mb-7">
       <div className="py-6  flex flex-col justify-evenly ">
-        <h1 className="text-5xl">Boston</h1>
+        <h1 className="text-5xl">{props.locData.city}</h1>
 
-        <h2 className=" text-lg text-slate-300">Massachusetts</h2>
-        <h3 className="text-lg text-slate-300">Monday, January 01 </h3>
-        <h3 className="hidden md:block text-lg text-slate-300">7:00 AM</h3>
+        <h2 className=" text-lg text-slate-300">{props.locData.state}</h2>
+        <h3 className="text-lg text-slate-300">
+          {props.dateAndTime.day}, {props.dateAndTime.month}{" "}
+          {props.dateAndTime.date}{" "}
+        </h3>
+        <h3 className="hidden md:block text-lg text-slate-300">
+          {props.dateAndTime.time}
+        </h3>
       </div>
       <div className="flex items-center px-4">
         <div className="flex flex-col items-center px-2">
-          <h1 className="text-4xl">65°</h1>
-          <h2 className="text-lg text-slate-300">Sunny</h2>
+          <h1 className="text-4xl">{props.data.temp?.toFixed(0)}°</h1>
+          <h2 className="text-lg text-slate-300">
+            {props.data ? props.data.description : null}
+          </h2>
           <div className="flex">
             <div className="flex flex-col mx-1 justify-center items-center">
               <h3>High</h3>
-              <span>78°</span>
+              <span>{props.data.max?.toFixed(0)}</span>
             </div>
             <div className="flex flex-col mx-1">
               <h3>Low</h3>
-              <span>52°</span>
+              <span>{props.data.min?.toFixed(0)}</span>
             </div>
           </div>
         </div>
