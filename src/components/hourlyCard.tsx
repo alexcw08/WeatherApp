@@ -10,12 +10,6 @@ interface hourObj {
 }
 
 function hourlyCard(props: HourlyProps) {
-  props.hourlyData.map((time) => {
-    console.log(time.time);
-    console.log(time.temp);
-    console.log(time.description);
-  });
-
   return (
     <div className="flex flex-col bg-violet-700 text-slate-100 rounded-xl w-11/12 mb-7">
       <div className="flex mt-6 ml-10 mr-8 text-xl text-violet-100 justify-between mb-3">
